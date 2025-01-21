@@ -4,26 +4,36 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-      "prisma:dev:deploy": "prisma migrate deploy",
-      "db:dev:rm": "docker compose rm dev-db -s -f -v",
-      "db:dev:up": "docker compose up dev-db -d",
-      "db:dev:restart": "npm run db:dev:rm && npm run db:dev:up && sleep 1 && npm run prisma:dev:deploy",
-      "build": "nest build",
-      "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-      "start": "nest start",
-      "start:dev": "nest start --watch" 
+        "prisma:dev:deploy": "prisma migrate deploy",
+        "db:dev:rm": "docker compose rm dev-db -s -f -v",
+        "db:dev:up": "docker compose up dev-db -d",
+        "db:dev:restart": "npm run db:dev:rm && npm run db:dev:up && sleep 1 && npm run prisma:dev:deploy",
+        "build": "nest build",
+        "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+        "start": "nest start",
+        "start:dev": "nest start --watch"
     },
     "author": "",
     "license": "UNLICENSED",
     "dependencies": {
-      "nestjs/config": "^2.0.0",
-      "docker-compose": "^1.0.0"
-
+        "@nestjs/common": "^11.0.3",
+        "@nestjs/config": "^4.0.0",
+        "@nestjs/core": "^11.0.3",
+        "@nestjs/jwt": "^11.0.0",
+        "@nestjs/passport": "^11.0.4",
+        "@nestjs/platform-express": "^11.0.3",
+        "@prisma/client": "^6.2.1",
+        "argon2": "^0.41.1",
+        "class-transformer": "^0.5.1",
+        "class-validator": "^0.14.1",
+        "passport": "^0.7.0",
+        "passport-jwt": "^4.0.1",
+        "reflect-metadata": "^0.2.2",
+        "rxjs": "^7.8.1"
     },
     "devDependencies": {
-      "prisma": "^5.0.0",
-      "prettier": "^3.0.0"
-
+        "@types/passport-jwt": "^4.0.1",
+        "prisma": "^6.2.1",
+        "typescript": "^5.7.3"
     }
-  }
-  
+}
