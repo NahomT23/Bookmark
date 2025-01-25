@@ -1,15 +1,23 @@
-import { Button } from "./components/ui/button"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import Navbar from "./_components/Navbar";
+import Bookmarks from "./pages/Bookmarks";
+
 
 function App() {
-
   return (
-    <>
-    <h1 className="text-5xl">App page</h1>
-    <Button>
-      Click Me!
-    </Button>
-    </>
-  )
+    <Router>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/bookmarks" element={<Bookmarks />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

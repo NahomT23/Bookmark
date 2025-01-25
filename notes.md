@@ -1,0 +1,5 @@
+- Make the links image appear
+- Make a spot for an image for when the link has an image
+- Polish the UI/UX
+- Understand the code
+- Deploy on vercel

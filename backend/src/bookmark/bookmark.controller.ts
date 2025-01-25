@@ -41,11 +41,11 @@ export class BookmarkController {
         )
     }
 
-    @Delete()
-    deleteBookMarkById(@GetUser('id') userId: number, @Param('id', ParseIntPipe) bookmarkId: number){
-        return this.bookmarkService.deleteBookMarkById(
-            userId,
-            bookmarkId
-        )
-    }
+    @Delete(':id') // Corrected to include the :id parameter
+  deleteBookMarkById(
+    @GetUser('id') userId: number,
+    @Param('id', ParseIntPipe) bookmarkId: number,
+  ) {
+    return this.bookmarkService.deleteBookMarkById(userId, bookmarkId);
+  }
 }

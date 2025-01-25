@@ -24,16 +24,6 @@ export class BookmarkService {
         })
     }
     
-    // async createBookMark(userId: number, dto: CreateBookMarkDto){
-    //     const bookmark = await this.prisma.bookmark.create({
-    //         data: {
-    //             userId,
-    //             ...dto,
-    //         }
-    //     })
-
-    //     return bookmark
-    // }
     async createBookMark(userId: number, dto: CreateBookMarkDto) {
         const bookmark = await this.prisma.bookmark.create({
             data: {
